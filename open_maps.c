@@ -31,45 +31,42 @@ int main(int argc, char** argv)
 
 	for(int i = 0; i < numFiles; i++)
 	{
-		md[i].mapFile = argv[i+1];
-		md[i].fd = open(md[i].mapFile, O_RDONLY);
+		struct map_data* curData = &md[i];
 
-		printf("Opened %s into fd=%d\n", md[i].mapFile, md[i].fd);
+		curData->mapFile = argv[i+1];
+		curData->fd = open(curData->mapFile, O_RDONLY);
 
-		md[i].fileLen = lseek(md[i].fd, 0, SEEK_END);
-		printf("  File / map length = %d\n", md[i].fileLen);
-	}
+		printf("Opened %s into fd=%d\n", curData->mapFile, curData->fd);
 
-	for(int i = 0; i < numFiles; i++)
-	{
-		printf("Opening the map for %s\n", md[i].mapFile);
+		curData->fileLen = lseek(curData->fd, 0, SEEK_END);
+		printf("  File / map length = %d\n", curData->fileLen);
+		
+		curData->mapPtr = mmap(0, curData->fileLen, PROT_READ, MAP_PRIVATE, curData->fd, 0);
+		printf("  Pointer to mmap at %p\n", curData->mapPtr);
 
-		md[i].mapPtr = mmap(0, md[i].fileLen, PROT_READ, MAP_PRIVATE, md[i].fd, 0);
-		printf("  Pointer to mmap at %p\n", md[i].mapPtr);
-
+		// You can close a file and keep the map to it open...
 		printf("Closing the file\n");
-		close(md[i].fd);
+		close(curData->fd);
+
+		curData->sillyChecksum = 0;
+		uint8_t* data = curData->mapPtr;
+		for(int filePos = 0; filePos < curData->fileLen; filePos++)
+		{
+			curData->sillyChecksum += data[filePos];
+		}
+
+		printf("Checksum = 0x%08x\n", curData->sillyChecksum);
+
 	}
 
 	printf("Sleeping for 5 seconds\n");
 	sleep(5);
 
-	for(int i = 0; i < numFiles; i++)
-	{
-		int cs = 0;
-		uint8_t* data = md[i].mapPtr;
-		for(int filePos = 0; filePos < md[i].fileLen; filePos++)
-		{
-			cs += data[filePos];
-		}
-
-		printf("Checksum = %d\n", cs);
-	}
-
 	for (int i = 0; i < numFiles; i++)
 	{
-		printf("Closing the mmap for %s\n", md[i].mapFile);
-		munmap(md[i].mapPtr, md[i].fileLen);
+		struct map_data* curData = &md[i];
+		printf("Closing the mmap for %s\n", curData->mapFile);
+		munmap(curData->mapPtr, curData->fileLen);
 	}
 
 	printf("Exitting\n");
