@@ -1,0 +1,489 @@
+host mmap_min_addr=0x10000
+Locating guest address space @ 0x10000
+page layout changed following target_mmap
+start    end      size     prot
+00010000-01022000 01012000 ---
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-01022000 01011000 ---
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+40000000-40801000 00801000 rw-
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+3ffc4000-40001000 0003d000 ---
+40001000-40801000 00800000 rw-
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-40001000 00014000 ---
+40001000-40801000 00800000 rw-
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+00022000-01022000 01000000 ---
+3ffc3000-3ffc4000 00001000 rw-
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+guest_base  0x10000
+page layout changed following binary load
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+start_brk   0x00000000
+end_code    0x00010b40
+start_code  0x00010000
+start_data  0x00020f10
+end_data    0x0002104c
+start_stack 0x407fff90
+brk         0x00021050
+entry       0x3ffdde08
+argv_start  0x407fff94
+env_start   0x407fffb0
+auxv_start  0x408000b4
+148176 brk(NULL) = 0x00022000
+148176 uname(0x407ffaf8) = 0
+148176 access("/etc/ld.so.preload",R_OK) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/etc/ld.so.cache",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+148176 statx(4,"",AT_EMPTY_PATH|AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff1e0) = 0
+148176 mmap2(NULL,129143,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3ffa3000
+148176 close(4) = 0
+148176 openat(AT_FDCWD,"/lib/i386-linux-gnu/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+148176 read(4,0x407ff408,512) = 512
+148176 close(4) = 0
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/tls/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/tls",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/arm-linux-gnueabi/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/arm-linux-gnueabi",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = 0
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/tls",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/usr/lib/arm-linux-gnueabi/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/usr/lib/arm-linux-gnueabi",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = 0
+148176 openat(AT_FDCWD,"/lib/tls/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/tls/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/tls",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/v8l/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/v8l/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/v8l/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/v8l/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/v8l/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/v8l/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/v8l/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/v8l",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/neon/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/neon/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/neon/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/neon",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/vfp/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = -1 errno=2 (No such file or directory)
+148176 statx(AT_FDCWD,"/lib/vfp",AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff178) = -1 errno=2 (No such file or directory)
+148176 openat(AT_FDCWD,"/lib/libc.so.6",O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 4
+148176 read(4,0x407ff408,512) = 512
+148176 statx(4,"",AT_EMPTY_PATH|AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ff168) = 0
+148176 mmap2(NULL,8192,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANONYMOUS,-1,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3ffa1000
+148176 mmap2(NULL,1708484,PROT_NONE,MAP_PRIVATE|MAP_ANONYMOUS,-1,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3fdff000-3ffa1000 001a2000 ---
+3ffa1000-3ffa3000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3fdff000
+148176 mmap2(0x3fe00000,1642948,PROT_EXEC|PROT_READ,MAP_PRIVATE|MAP_DENYWRITE|MAP_FIXED,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3fdff000-3fe00000 00001000 ---
+3fe00000-3ff92000 00192000 r-x
+3ff92000-3ffa1000 0000f000 ---
+3ffa1000-3ffa3000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3fe00000
+148176 munmap(0x3fdff000,4096) = 0
+148176 munmap(0x3ff92000,57796) = 0
+148176 mprotect(0x3ff76000,61440,PROT_NONE) = 0
+148176 mmap2(0x3ff85000,12288,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_DENYWRITE|MAP_FIXED,4,0x175)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff88000 00003000 rw-
+3ff88000-3ff92000 0000a000 r-x
+3ffa1000-3ffa3000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3ff85000
+148176 mmap2(0x3ff88000,37316,PROT_READ|PROT_WRITE,MAP_PRIVATE|MAP_ANONYMOUS|MAP_FIXED,-1,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00022000 00002000 rw-
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff88000 00003000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffa3000-3ffc3000 00020000 r--
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-40000000 00003000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x3ff88000
+148176 close(4) = 0
+148176 set_tid_address(1073354760,1073354752,1073737816,1073354656,1073356064,1073737728) = 148176
+148176 set_robust_list(1073354768,12,1,-20,1073356064,1073737728) = -1 errno=38 (Function not implemented)
+148176 Unknown syscall 398
+148176 mprotect(0x3ff85000,8192,PROT_READ) = 0
+148176 mprotect(0x00020000,4096,PROT_READ) = 0
+148176 mprotect(0x3fffd000,8192,PROT_READ) = 0
+148176 ugetrlimit(3,1082129548,1073262916,1073287618,1,1073246208) = 0
+148176 munmap(0x3ffa3000,129143) = 0
+148176 statx(1,"",AT_EMPTY_PATH|AT_NO_AUTOMOUNT,STATX_BASIC_STATS,0x407ffbd0) = 0
+148176 getrandom(1073260704,4,1,0,1073260704,1073356064) = 4
+148176 brk(NULL) = 0x00022000
+148176 brk(0x00043000)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x00043000
+148176 write(1,0x22190,45) = 45
+148176 openat(AT_FDCWD,"big_map1.bin",O_RDONLY) = 4
+148176 write(1,0x22190,30) = 30
+148176 _llseek(4,0,0,0x407ffdc8,SEEK_END) = 0
+148176 write(1,0x22190,32) = 32
+148176 mmap2(NULL,268435456,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+2fe00000-3fe00000 10000000 r--
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x2fe00000
+148176 write(1,0x22190,32) = 32
+148176 write(1,0x22190,17) = 17
+148176 close(4) = 0
+148176 write(1,0x22190,22) = 22
+148176 openat(AT_FDCWD,"big_map2.bin",O_RDONLY) = 4
+148176 write(1,0x22190,30) = 30
+148176 _llseek(4,0,0,0x407ffdc8,SEEK_END) = 0
+148176 write(1,0x22190,32) = 32
+148176 mmap2(NULL,268435456,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+1fe00000-3fe00000 20000000 r--
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x1fe00000
+148176 write(1,0x22190,32) = 32
+148176 write(1,0x22190,17) = 17
+148176 close(4) = 0
+148176 write(1,0x22190,22) = 22
+148176 openat(AT_FDCWD,"big_map3.bin",O_RDONLY) = 4
+148176 write(1,0x22190,30) = 30
+148176 _llseek(4,0,0,0x407ffdc8,SEEK_END) = 0
+148176 write(1,0x22190,32) = 32
+148176 mmap2(NULL,268435456,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+0fe00000-3fe00000 30000000 r--
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+ = 0x0fe00000
+148176 write(1,0x22190,31) = 31
+148176 write(1,0x22190,17) = 17
+148176 close(4) = 0
+148176 write(1,0x22190,22) = 22
+148176 openat(AT_FDCWD,"big_map4.bin",O_RDONLY) = 4
+148176 write(1,0x22190,30) = 30
+148176 _llseek(4,0,0,0x407ffdc8,SEEK_END) = 0
+148176 write(1,0x22190,32) = 32
+148176 mmap2(NULL,268435456,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+0fe00000-3fe00000 30000000 r--
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+efff0000-ffff0000 10000000 r--
+ = -1 errno=268500992 (Unknown error 268500992)
+148176 write(1,0x22190,32) = 32
+148176 write(1,0x22190,17) = 17
+148176 close(4) = 0
+148176 write(1,0x22190,22) = 22
+148176 openat(AT_FDCWD,"big_map5.bin",O_RDONLY) = 4
+148176 write(1,0x22190,30) = 30
+148176 _llseek(4,0,0,0x407ffdc8,SEEK_END) = 0
+148176 write(1,0x22190,32) = 32
+148176 mmap2(NULL,268435456,PROT_READ,MAP_PRIVATE,4,0)page layout changed following target_mmap
+start    end      size     prot
+00010000-00011000 00001000 r-x
+00011000-00020000 0000f000 ---
+00020000-00021000 00001000 r--
+00021000-00022000 00001000 rw-
+00022000-00043000 00021000 rw-
+0fe00000-3fe00000 30000000 r--
+3fe00000-3ff76000 00176000 r-x
+3ff76000-3ff85000 0000f000 ---
+3ff85000-3ff87000 00002000 r--
+3ff87000-3ff88000 00001000 rw-
+3ff88000-3ff92000 0000a000 rw-
+3ffa1000-3ffa3000 00002000 rw-
+3ffc3000-3ffc4000 00001000 r-x
+3ffc4000-3ffed000 00029000 r-x
+3ffed000-3fffd000 00010000 ---
+3fffd000-3ffff000 00002000 r--
+3ffff000-40000000 00001000 rw-
+40000000-40001000 00001000 ---
+40001000-40801000 00800000 rw-
+dfff0000-ffff0000 20000000 r--
+ = -1 errno=536936448 (Unknown error 536936448)
+148176 write(1,0x22190,32) = 32
+148176 write(1,0x22190,17) = 17
+148176 close(4) = 0
+148176 write(1,0x22190,22) = 22
+148176 write(1,0x22190,23) = 23
+148176 clock_nanosleep(0,0,1082129728,1082129720,0,1082129816) = 0
+148176 write(1,0x22190,34) = 34
+148176 munmap(0x2fe00000,268435456) = 0
+148176 write(1,0x22190,34) = 34
+148176 munmap(0x1fe00000,268435456) = 0
+148176 write(1,0x22190,34) = 34
+148176 munmap(0x0fe00000,268435456) = 0
+148176 write(1,0x22190,34) = 34
+148176 munmap(0xefff0000,268435456) = 0
+148176 write(1,0x22190,34) = 34
+148176 munmap(0xdfff0000,268435456) = 0
+148176 write(1,0x22190,9) = 9
+148176 exit_group(0)

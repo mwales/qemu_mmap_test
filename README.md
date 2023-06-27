@@ -15,6 +15,8 @@ by running the following command:
 
 ```
 sudo apt-get install gcc-arm-linux-gnueabi g++-arm-linux-gnueabi
+./build_both.sh          # Compiles ARM and x64 versions of sample app
+./make_big_maps.sh       # Creates the 256MB files from /dev/urandom
 ```
 
 This program simply opens all the files provided on the command line, and
@@ -33,6 +35,28 @@ of memory to open mmaps with.  The older version of QEMU v6.2 does the same thin
 at first, but then it also will use memory at an address higher than the ELF.
 
 I've included some logs to illustrate.
+
+## My QEMU v8 build info
+
+Last commit where I've been testing...
+
+```
+commit cab35c73be9d579db105ef73fa8a60728a890098 (HEAD -> master, origin/staging, origin/master, origin/HEAD)
+Merge: 48ab886d3d d7ee93e243
+Author: Richard Henderson <richard.henderson@linaro.org>
+Date:   Tue Jun 20 10:26:53 2023 +0200
+```
+
+How I built...
+
+```
+git clone https://github.com/qemu/qemu
+cd qemu
+mkdir build
+cd build
+../configure
+make -j8
+```
 
 # QEMU v6.2 Run
 
